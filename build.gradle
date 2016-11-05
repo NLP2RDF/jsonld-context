@@ -1,0 +1,46 @@
+group 'org.nlp2rdf'
+version '1.0'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'jsonldcontext'
+    version =  '0.1.0'
+}
+
+
+springBoot  {
+    buildInfo()
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web") {
+        exclude module: "spring-boot-starter-tomcat"
+    }
+    compile group: 'commons-io', name: 'commons-io', version: '2.5'
+    compile("org.springframework.boot:spring-boot-starter-jetty")
+    compile 'org.nlp2rdf:nif:0.4.1'
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    testCompile("junit:junit")
+}
