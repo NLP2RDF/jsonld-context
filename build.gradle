@@ -40,7 +40,7 @@ dependencies {
     }
     compile group: 'commons-io', name: 'commons-io', version: '2.5'
     compile("org.springframework.boot:spring-boot-starter-jetty")
-    compile 'org.nlp2rdf:nif:0.4.1'
+    compile 'org.nlp2rdf:nif:0.4'
     compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("junit:junit")
 }
