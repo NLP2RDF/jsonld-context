@@ -1,0 +1,61 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "JSONLD Context",
+        "description": "Move your ontology forward with JSONLD Context",
+        "version": "1.0.0"
+    },
+    "host": "jsonld-context.io",
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/api",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/v1": {
+            "get": {
+                "summary": "jsonld-context",
+                "description": "This endpoint reads your ontology file and returns it converted in JSONLD-Context.\n",
+                "parameters": [
+                    {
+                        "name": "ontology",
+                        "in": "query",
+                        "description": "a address to your ontology",
+                        "required": true,
+                        "type": "string",
+                        "format": "url"
+                    },
+                    {
+                        "name": "template",
+                        "in": "query",
+                        "description": "Velocity template",
+                        "required": false,
+                        "type": "string",
+                        "format": "url"
+                    },
+                    {
+                        "name": "language",
+                        "in": "query",
+                        "description": "Language",
+                        "required": false,
+                        "type": "string",
+                        "format": "string"
+                    }
+                ],
+                "tags": [
+                    "json-ld"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "jsonld-context"
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        }
+    }
+}
