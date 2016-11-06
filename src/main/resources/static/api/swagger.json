@@ -7,7 +7,7 @@
     },
     "host": "jsonld-context.io",
     "schemes": [
-        "http"
+        "https"
     ],
     "basePath": "/api",
     "produces": [
