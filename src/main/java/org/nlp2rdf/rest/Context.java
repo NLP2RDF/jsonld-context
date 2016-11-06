@@ -33,10 +33,12 @@ public class Context {
         String templateFileName = getTemplate(template);
 
         if (!templateFileName.isEmpty()) {
-            return context.getContextForJSONLD(ontologies, templateFileName, language);
+           // return context.getContextForJSONLD(ontologies, templateFileName, language);
         }
 
-        return context.getContextForJSONLD(ontologies, language);
+        //return context.getContextForJSONLD(ontologies, language);
+
+        return "";
     }
 
 
@@ -45,7 +47,7 @@ public class Context {
             try {
                 String result = IOUtils.toString(new URL(template));
                 String fileName = template.replace("http://", "").replace("/", "").replace(":", "").replace("-","").replace(".","");
-                fileName = String.format(NIFFormat.TEMPLATE_ROOT.concat("%s"), fileName);
+               // fileName = String.format(NIFFormat.TEMPLATE_ROOT.concat("%s"), fileName);
                 Files.write(Paths.get(fileName), result.getBytes());
                 return fileName;
             } catch (Exception e) {
