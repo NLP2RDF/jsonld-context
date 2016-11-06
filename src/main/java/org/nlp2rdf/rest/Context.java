@@ -33,21 +33,19 @@ public class Context {
         String templateFileName = getTemplate(template);
 
         if (!templateFileName.isEmpty()) {
-           // return context.getContextForJSONLD(ontologies, templateFileName, language);
+            return context.getContextForJSONLD(ontologies, templateFileName, language);
         }
 
-        //return context.getContextForJSONLD(ontologies, language);
+        return context.getContextForJSONLD(ontologies, language);
 
-        return "";
     }
-
 
     private String getTemplate(String template) {
         if (template != null && !template.isEmpty()) {
             try {
                 String result = IOUtils.toString(new URL(template));
                 String fileName = template.replace("http://", "").replace("/", "").replace(":", "").replace("-","").replace(".","");
-               // fileName = String.format(NIFFormat.TEMPLATE_ROOT.concat("%s"), fileName);
+                fileName = String.format(NIFFormat.TEMPLATE_ROOT.concat("%s"), fileName);
                 Files.write(Paths.get(fileName), result.getBytes());
                 return fileName;
             } catch (Exception e) {
@@ -55,8 +53,6 @@ public class Context {
             }
         }
         return "";
-
     }
-
 
 }
