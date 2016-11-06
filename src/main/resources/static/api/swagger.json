@@ -1,8 +1,8 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "JSONLD Context",
-        "description": "Move your ontology forward with JSONLD Context",
+        "title": "",
+        "description": "",
         "version": "1.0.0"
     },
     "host": "jsonld-context.io",
