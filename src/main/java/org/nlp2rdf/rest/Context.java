@@ -18,9 +18,10 @@ public class Context {
 
     @ResponseBody
     @CrossOrigin
-    @RequestMapping(value = "/context", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/v1", method = RequestMethod.GET)
     public String getContext(@RequestParam(name = "ontology") String ontology,
-                             @RequestParam(name = "template", required = false) String template) {
+                             @RequestParam(name = "template", required = false) String template,
+                             @RequestParam(name = "language", required = false, defaultValue ="en") String language) {
 
         Preconditions.checkNotNull(ontology);
 
@@ -32,10 +33,10 @@ public class Context {
         String templateFileName = getTemplate(template);
 
         if (!templateFileName.isEmpty()) {
-            return context.getContextForJSONLD(ontologies, templateFileName);
+            return context.getContextForJSONLD(ontologies, templateFileName, language);
         }
 
-        return context.getContextForJSONLD(ontologies);
+        return context.getContextForJSONLD(ontologies, language);
     }
 
 
