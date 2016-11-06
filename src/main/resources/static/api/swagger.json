@@ -25,7 +25,8 @@
                         "description": "a address to your ontology",
                         "required": true,
                         "type": "string",
-                        "format": "url"
+                        "format": "url",
+                        "default": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
                     },
                     {
                         "name": "template",

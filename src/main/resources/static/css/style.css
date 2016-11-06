@@ -93,8 +93,8 @@ nav {display: inline-block;}
 .content-box{margin-bottom:30px;}
 .call {padding: 50px 0 52px;position: relative;background:url(img/bg-1.jpg);background-repeat: no-repeat;}
 .call-text {position: relative;z-index: 1;color: #fff;}
-.call-text > h3{color: #fff;font-size: 22px;font-weight: 700;text-transform: uppercase;margin-bottom: 17px;font-family: "Open Sans", sans-serif;}
-.title-intern {font-size: 22px;font-weight: 700;text-transform: uppercase;color: #004164;margin-bottom: 17px;font-family: "Open Sans", sans-serif;}
+.call-text > h3{color: #fff;font-size: 22px;font-weight: 700;text-transform: uppercase;margin-bottom: 17px; margin-top: 17px;font-family: "Open Sans", sans-serif;}
+.title-intern {font-size: 22px;font-weight: 700;text-transform: uppercase;color: #004164;margin-bottom: 17px; margin-top: 17px;font-family: "Open Sans", sans-serif;}
 .call-text > p {color: #e9e9e9;font-family: "Open Sans", sans-serif;font-size: 14px;font-weight: 300;line-height: 21px;margin-bottom: 0;width: 90%;}
 .call .cl-effect-2 a span {margin-top: 10px;height: 55px;line-height: 55px;width: 190px;}
 .call .row {position: relative;z-index: 4;}
