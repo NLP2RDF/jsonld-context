@@ -28,7 +28,11 @@ public class Context {
         ContextJSONLD context = new NIF21();
         Set<String> ontologies = new HashSet<>();
 
-        ontologies.add(ontology);
+        String[] ontologyArray = ontology.split(",");
+
+        for (int i=0; i < ontologyArray.length; i ++) {
+            ontologies.add(ontologyArray[i]);
+        }
 
         String templateFileName = getTemplate(template);
 
