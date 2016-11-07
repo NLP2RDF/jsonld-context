@@ -5,9 +5,9 @@
         "description": "",
         "version": "1.0.0"
     },
-    "host": "jsonld-context.io",
+    "host": "www.jsonld-context.io",
     "schemes": [
-        "http"
+        "http", "https"
     ],
     "basePath": "/api",
     "produces": [
