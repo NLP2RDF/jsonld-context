@@ -8,6 +8,7 @@ import org.nlp2rdf.nif21.impl.NIF21;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URL;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashSet;
@@ -46,13 +47,13 @@ public class Context {
     private String getTemplate(String template) {
         if (template != null && !template.isEmpty()) {
             try {
-                String result = IOUtils.toString(new URL(template));
+                String result = IOUtils.toString(new URL(template), Charset.defaultCharset());
                 String fileName = template.replace("http://", "").replace("/", "").replace(":", "").replace("-","").replace(".","");
                 fileName = String.format(NIFFormat.TEMPLATE_ROOT.concat("%s"), fileName);
                 Files.write(Paths.get(fileName), result.getBytes());
                 return fileName;
             } catch (Exception e) {
-                ;
+                return "";
             }
         }
         return "";
