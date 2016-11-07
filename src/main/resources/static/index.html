@@ -61,18 +61,17 @@
                         <p>jsonld-context.io is a easy way to get your ontology in json-ld context.</p>
 
                         <h3>How?</h3>
-                        <p>Just click to try it out button in API section. You can also use this service into @Context.</p>
-                        <p> Just fill with http://www.jsonld-context.io/api/v1?ontology=ADDRESS_TO_YOUR_ONTOLOGY</p>
+                        <p>Just click to "try it out" button in API section. You can also use this service into @Context.</p>
                         <p>E.g.: </p>
-
                         <pre>
                             <code class="json">
 
 {
-    "@context": "http://www.jsonld-context.io/api/v1?ontology=http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#"
+    "@context": "http://www.jsonld-context.io/api/v1?ontology=http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core"
 }
                             </code>
                         </pre>
+                        <p>You can also combine more than one ontology to build a context, just concatenating the property ontology with the corresponding values.</p>
                     </div>
                 </div>
             </div>
