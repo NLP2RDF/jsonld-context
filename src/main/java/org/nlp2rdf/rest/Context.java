@@ -19,7 +19,7 @@ public class Context {
     @ResponseBody
     @CrossOrigin
     @RequestMapping(value = "/api/v1", method = RequestMethod.GET)
-    public String getContext(@RequestParam(name = "ontology") String ontology,
+    public String getContext(@RequestParam(name = "ontology") String[] ontology,
                              @RequestParam(name = "template", required = false) String template,
                              @RequestParam(name = "language", required = false, defaultValue ="en") String language) {
 
@@ -28,10 +28,9 @@ public class Context {
         ContextJSONLD context = new NIF21();
         Set<String> ontologies = new HashSet<>();
 
-        String[] ontologyArray = ontology.split(",");
 
-        for (int i=0; i < ontologyArray.length; i ++) {
-            ontologies.add(ontologyArray[i]);
+        for (int i=0; i < ontology.length; i++) {
+            ontologies.add(ontology[i]);
         }
 
         String templateFileName = getTemplate(template);
