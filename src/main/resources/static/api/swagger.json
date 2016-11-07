@@ -5,9 +5,9 @@
         "description": "",
         "version": "1.0.0"
     },
-    "host": "jsonld-context.io",
+    "host": "jsonld-context.herokuapp.com",
     "schemes": [
-        "https"
+        "http", "https"
     ],
     "basePath": "/api",
     "produces": [
