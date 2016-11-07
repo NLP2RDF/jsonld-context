@@ -15,6 +15,9 @@ E.g.:
 
 ``
 {
-    "@context": "http://www.jsonld-context.io/api/v1?ontology=http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core"
+   
+   "@context": "http://www.jsonld-context.io/api/v1?ontology=http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core"
+   
+   
 }
 ``
