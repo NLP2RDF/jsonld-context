@@ -19,3 +19,15 @@ E.g.:
 ``
 
 This service is available under [www.jsonld-context.io](http://www.jsonld-context.io)
+
+
+
+
+## Issues
+
+If you have any problems with or questions about this library, please contact us through a [GitHub issue](https://github.com/NLP2RDF/jsonld-context/issues).
+
+## Maintainers
+
+<a href="http://infai.org"><img src="http://infai.org/de/Presse/Logos/files?get=infai_logo_en_rgb_300dpi.jpg" align="left" height="20%" width="20%" ></a>
+
