@@ -18,8 +18,6 @@ E.g.:
 "@context": "http://www.jsonld-context.io/api/v1?ontology=http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core"
 ```
 
-This service is available under [www.jsonld-context.io](http://www.jsonld-context.io)
-
 
 
 ## Issues
